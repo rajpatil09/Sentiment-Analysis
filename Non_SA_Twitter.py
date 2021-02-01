@@ -150,7 +150,7 @@ getDocs.close()
 
 def find_features(doc):
     words = set(doc)				        #get unique words in the document
-    features = {}							#2D array representing all files, where each row (a file) has all the 3000 words along with value of T (present) or F (absent)
+    features = {}							#dictionary representing all files, where each row (a file) has all the 3000 words along with value of T (present) or F (absent)
     for w in word_features:
         features[w] = (w in words)
     return features
